@@ -18,7 +18,7 @@ const _fileLoader: BaseFileLoaderFunction = ({
   fileLoaderComplete,
   readerTypeFunction,
 }) => {
-  return fetch(documentURI, { signal })
+  return fetch(documentURI, { signal,credentials:"include" })
     .then(async (res) => {
       const blob = await res.blob();
 
